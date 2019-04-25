@@ -19,6 +19,9 @@ names(CraterLake_80transects)[3] <- "Lat"
 CraterLake_basic <- ggplot(CraterLake_80transects, aes(x = Lon, y = Lat, group = Lat, height = Elev)) + 
   geom_density_ridges(stat = "identity")
 
+# Call the default plot variable
+CraterLake_basic
+
 # customize the plot's appearance to mimic the Unknown Pleasures artwork
 CraterLake_Joy <- ggplot(CraterLake_80transects, aes(x = Lon, y = Lat, group = Lat, height = Elev)) + 
   geom_density_ridges(stat = "identity", scale = 15, fill="black", color = "white") +
@@ -43,7 +46,7 @@ CraterLake_Joy <- ggplot(CraterLake_80transects, aes(x = Lon, y = Lat, group = L
   # projects the transect data to a specified PCS
   coord_map()
 
-# Call the transect map variable
+# Call the stylized plot variable
 CraterLake_Joy
 
 # Save the plot as a PNG or PDF
