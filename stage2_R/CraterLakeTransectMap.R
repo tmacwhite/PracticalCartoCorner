@@ -16,7 +16,7 @@ names(CraterLake_80transects)[2] <- "Lon"
 names(CraterLake_80transects)[3] <- "Lat"
 
 # plot the transects with ggplot2 & ggridges by calling the geom_density_ridges function
-ggplot(CraterLake_80transects, aes(x = Lon, y = Lat, group = Lat, height = Elev)) + 
+CraterLake_basic <- ggplot(CraterLake_80transects, aes(x = Lon, y = Lat, group = Lat, height = Elev)) + 
   geom_density_ridges(stat = "identity")
 
 # customize the plot's appearance to mimic the Unknown Pleasures artwork
